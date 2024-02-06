@@ -1238,72 +1238,35 @@
         </script>
 
 			<!-- -------------1)Hero-section--------------- -->
-			<div class="more_section" id="conaitnerCheck">
-				<h1 class="more_close" onclick="showDetailsPopUp()">X</h1>
-				<div class="more_container">
-					<h1 class="more_container_title">How to become Frontend Developer</h1>
-					<p>Lorem ipsum dolor sit amet consectetur asdgsdagsdga gsdag</p>
-					<div class="more_banner_holder">
-						<img src="./assets/photo.jpg" alt="" />
-					</div>
-					<div class="more_description">
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum iure
-							aliquid dolor laborum, suscipit laboriosam totam a! Dicta aliquam,
-							eos vitae iusto accusantium ratione inventore praesentium
-							repudiandae sed quaerat voluptatum.
-						</p>
-					</div>
-					<div class="more_description">
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum iure
-							aliquid dolor laborum, suscipit laboriosam totam a! Dicta aliquam,
-							eos vitae iusto accusantium ratione inventore praesentium
-							repudiandae sed quaerat voluptatum.
-						</p>
-					</div>
-					<div class="more_description">
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum iure
-							aliquid dolor laborum, suscipit laboriosam totam a! Dicta aliquam,
-							eos vitae iusto accusantium ratione inventore praesentium
-							repudiandae sed quaerat voluptatum.
-						</p>
-					</div>
-					<div class="more_description">
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum iure
-							aliquid dolor laborum, suscipit laboriosam totam a! Dicta aliquam,
-							eos vitae iusto accusantium ratione inventore praesentium
-							repudiandae sed quaerat voluptatum.
-						</p>
-					</div>
-					<div class="more_description">
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum iure
-							aliquid dolor laborum, suscipit laboriosam totam a! Dicta aliquam,
-							eos vitae iusto accusantium ratione inventore praesentium
-							repudiandae sed quaerat voluptatum.
-						</p>
-					</div>
-					<div class="more_description">
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum iure
-							aliquid dolor laborum, suscipit laboriosam totam a! Dicta aliquam,
-							eos vitae iusto accusantium ratione inventore praesentium
-							repudiandae sed quaerat voluptatum.
-						</p>
-					</div>
-					<div class="more_description">
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum iure
-							aliquid dolor laborum, suscipit laboriosam totam a! Dicta aliquam,
-							eos vitae iusto accusantium ratione inventore praesentium
-							repudiandae sed quaerat voluptatum.
-						</p>
-					</div>
-				</div>
-			</div>
+            <div class="more_section"  id="firstPopUp">
+                <h1 class="more_close" onclick="closefirstPopUp()">X</h1>
+                <div class="more_container">
+                    <h1 class="more_container_title">How to become Frontend Developer</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur asdgsdagsdga gsdag</p>
+                    <div class="more_banner_holder">
+                        <img src="./assets/photo.jpg" alt="" />
+                    </div>
+                    <div>
+                        <button onclick="openSecondPopUp()">Click</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="second_pop_up" id="secondPopUp">
+                <h1 class="more_close" onclick="closefirstPopUp()">X</h1>
+                <div class="more_container" >
+                <div class="second"  onclick="goBack()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                            <path d="M8.354 2.354a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 0 .708l6 6a.5.5 0 0 0 .708-.708L3.707 9H14.5a.5.5 0 0 0 0-1H3.707l4.147-4.146a.5.5 0 0 0 0-.708z"/>
+                        </svg>
+                    </div>
+                    
+                    <h1 class="more_container_title">Second Pop-Up</h1>
+                    <p>This is the content of the second pop-up.</p>
+                   
+                </div>
+            </div>
+            
 			<div class="hero_section">
 				<div class="hero_body">
 					<h1>Become a Data Scientist</h1>
@@ -1414,7 +1377,7 @@
 								HTML
 							</p>
 							<p class="timeline-subtitle">1 Hours Ago</p>
-							<button class="timeline-button" onclick="showDetailsPopUp()">
+							<button class="timeline-button" onclick="openfirstPopUp()">
 								view details
 							</button>
 						</div>
@@ -1433,7 +1396,7 @@
 								behaviour and look and feel of the web apps that you build.
 							</p>
 							<p class="timeline-subtitle">2 Hours Ago</p>
-							<button class="timeline-button" onclick="showDetailsPopUp()">
+							<button class="timeline-button" onclick="openfirstPopUp()">
 								view details
 							</button>
 						</div>
@@ -1453,7 +1416,7 @@
 								predominantly, and it is indispensable
 							</p>
 							<p class="timeline-subtitle">6 Hours Ago</p>
-							<button class="timeline-button" onclick="showDetailsPopUp()">
+							<button class="timeline-button" onclick="openfirstPopUp()">
 								view details
 							</button>
 						</div>
@@ -1475,7 +1438,7 @@
 								apps
 							</p>
 							<p class="timeline-subtitle">1 Day Ago</p>
-							<button class="timeline-button" onclick="showDetailsPopUp()">
+							<button class="timeline-button" onclick="openfirstPopUp()">
 								view details
 							</button>
 						</div>
@@ -1494,7 +1457,7 @@
 								skill, which is in demand and pays well
 							</p>
 							<p class="timeline-subtitle">3 Days Ago</p>
-							<button class="timeline-button" onclick="showDetailsPopUp()">
+							<button class="timeline-button" onclick="openfirstPopUp()">
 								view details
 							</button>
 						</div>
@@ -1515,7 +1478,7 @@
 								requirements
 							</p>
 							<p class="timeline-subtitle">4 Days Ago</p>
-							<button class="timeline-button" onclick="showDetailsPopUp()">
+							<button class="timeline-button" onclick="openfirstPopUp()">
 								view details
 							</button>
 						</div>
@@ -1997,17 +1960,68 @@
 		//-------------- View Details Popup function
 
 		const body = document.querySelector('body');
-
-		const showDetailsPopUp = () => {
-			const moreSection = document.querySelector('.more_section');
-			if (moreSection.style.display == 'grid') {
-				moreSection.style.display = 'none';
-				body.style.overflow = 'auto';
-			} else {
-				moreSection.style.display = 'grid';
-				body.style.overflow = 'hidden';
-			}
-		};
+ 
+        const openfirstPopUp = () => {
+            const firstPopUp = document.getElementById('firstPopUp');
+            const moreSection = document.querySelector('.more_section');
+            const backdrop = document.createElement('div');
+        
+            // Apply blur effect to the backdrop
+            backdrop.className = 'backdrop'; // Use the same class name
+            backdrop.style.position = 'fixed';
+            backdrop.style.top = '0';
+            backdrop.style.left = '0';
+            backdrop.style.width = '100%';
+            backdrop.style.height = '100%';
+            backdrop.style.background = 'rgba(0, 0, 0, 0.5)'; // Adjust the color and opacity
+            backdrop.style.filter = 'blur(5px)';
+        
+            document.body.appendChild(backdrop);
+        
+            moreSection.style.display = 'flex';
+        };
+        
+        const closefirstPopUp = () => {
+            const secondPopUp = document.getElementById('secondPopUp');
+            const moreSection = document.querySelector('.more_section');
+            const backdrop = document.querySelector('.backdrop');
+        
+            // Remove the backdrop if it exists
+            if (backdrop) {
+                backdrop.remove();
+            }
+        
+            secondPopUp.style.display = 'none';
+            moreSection.style.display = 'none';
+        };
+        
+        
+ 
+        
+        const openSecondPopUp = () => {
+            const secondPopUp = document.getElementById('secondPopUp');
+            const moreSection = document.querySelector('.more_section');
+            
+            moreSection.style.display = 'none';
+            secondPopUp.style.display = 'grid';
+        };
+        
+        const closeSecondPopUp = () => {
+            const secondPopUp = document.getElementById('secondPopUp');
+            const moreSection = document.querySelector('.more_section');
+            
+            secondPopUp.style.display = 'none';
+            moreSection.style.display = 'grid';
+        };
+        
+        const goBack = () => {
+            const secondPopUp = document.getElementById('secondPopUp');
+            const moreSection = document.querySelector('.more_section');
+        
+            secondPopUp.style.display = 'none';
+            moreSection.style.display = 'grid';
+        };
+        
 		const swiper = new Swiper('.swiper', {
 			// Optional parameters
 			direction: 'horizontal',
