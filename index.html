@@ -17,8 +17,10 @@
 			rel="stylesheet"
 			href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
 		/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
 		<!-- <link
 			rel="text/css"
@@ -1239,8 +1241,11 @@
 
 			<!-- -------------1)Hero-section--------------- -->
             <div class="more_section"  id="firstPopUp">
-                <h1 class="more_close" onclick="closefirstPopUp()">X</h1>
+               
+               
                 <div class="more_container">
+                    <div class="more_section2" >
+                        <h1 class="more_close" onclick="closefirstPopUp()"><i class="fas fa-times"></i></h1>
                     <h1 class="more_container_title">How to become Frontend Developer</h1>
                     <p>Lorem ipsum dolor sit amet consectetur asdgsdagsdga gsdag</p>
                     <div class="more_banner_holder">
@@ -1249,12 +1254,24 @@
                     <div>
                         <button onclick="openSecondPopUp()">Click</button>
                     </div>
+                    <div class="lorem_ipsum_text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    
+                    </div>
+
                 </div>
+             
             </div>
             
             <div class="second_pop_up" id="secondPopUp">
-                <h1 class="more_close" onclick="closefirstPopUp()">X</h1>
+                <h1 class="more_close" onclick="closefirstPopUp()"><i class="fas fa-times"></i></h1>
                 <div class="more_container" >
+                    <div class="more_section2" >
                 <div class="second"  onclick="goBack()">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
                             <path d="M8.354 2.354a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 0 .708l6 6a.5.5 0 0 0 .708-.708L3.707 9H14.5a.5.5 0 0 0 0-1H3.707l4.147-4.146a.5.5 0 0 0 0-.708z"/>
@@ -1263,7 +1280,7 @@
                     
                     <h1 class="more_container_title">Second Pop-Up</h1>
                     <p>This is the content of the second pop-up.</p>
-                   
+                   </div>
                 </div>
             </div>
             
@@ -1970,15 +1987,22 @@
             backdrop.className = 'backdrop'; // Use the same class name
             backdrop.style.position = 'fixed';
             backdrop.style.top = '0';
+            backdrop.style.zIndex = '1000';
             backdrop.style.left = '0';
             backdrop.style.width = '100%';
             backdrop.style.height = '100%';
             backdrop.style.background = 'rgba(0, 0, 0, 0.5)'; // Adjust the color and opacity
             backdrop.style.filter = 'blur(5px)';
+
+            backdrop.addEventListener('click', (event) => {
+                event.stopPropagation(); // Prevent the click event from reaching the body
+            });
+        
         
             document.body.appendChild(backdrop);
         
             moreSection.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
         };
         
         const closefirstPopUp = () => {
@@ -1990,7 +2014,7 @@
             if (backdrop) {
                 backdrop.remove();
             }
-        
+            document.body.style.overflow = 'auto';
             secondPopUp.style.display = 'none';
             moreSection.style.display = 'none';
         };
@@ -2009,7 +2033,7 @@
         const closeSecondPopUp = () => {
             const secondPopUp = document.getElementById('secondPopUp');
             const moreSection = document.querySelector('.more_section');
-            
+            document.body.style.overflow = 'auto';
             secondPopUp.style.display = 'none';
             moreSection.style.display = 'grid';
         };

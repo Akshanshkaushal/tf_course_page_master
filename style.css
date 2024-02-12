@@ -14,6 +14,7 @@
 }
 body {
 	background-color: #f0e4e4;
+	font-family: 'Roboto', sans-serif;
 }
 
 .avatar {
@@ -1151,6 +1152,14 @@ font-family: 'Poppins', sans-serif;
     transition: left 0.7s ease; 
 	animation: slide 1s ease-in-out;
 }
+
+.more_section2 {
+	width: 100%;
+    height: 100%;
+    max-width: 700px;  
+    margin: 0 auto;
+}
+
   
 
 .more_container {
@@ -1161,7 +1170,7 @@ font-family: 'Poppins', sans-serif;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 8px;
     padding: 20px 30px;
- 
+  
     position: relative;
 }
 
@@ -1176,6 +1185,7 @@ font-family: 'Poppins', sans-serif;
     align-items: center;
     z-index: 5556;  
     transition: left 0.3s ease;
+	animation: slide 1s ease-in-out;
 }
 
 
@@ -1252,16 +1262,64 @@ cursor: pointer;
 	font-weight: 500;
 }
 
+.lorem_ipsum_text{
+	margin-top: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
 @media (min-width: 768px) {
 .more_close {
 	position: fixed;
 	top: calc((100vh - 99vh));
-	left: calc((100vw - 53vw));
+	left: calc((100vw - 54vw));
 	font-weight: 600;
 	font-size: 1.3rem;
 	cursor: pointer;
 	z-index: 888;
 	animation: slide 1s ease-in-out;
+}
+
+/* @media (min-width: 1266px) {
+	.more_close {
+		position: fixed;
+		top: calc((100vh - 99vh));
+		left: calc((100vw - 60vw));
+		font-weight: 600;
+		font-size: 1.3rem;
+		cursor: pointer;
+		z-index: 888;
+		animation: slide 1s ease-in-out;
+	}
+} */
+
+
+
+@media (min-width: 1900px) {
+	.more_close {
+		position: fixed;
+		top: calc((100vh - 99vh));
+		left: calc((100vw - 62vw));
+		font-weight: 600;
+		font-size: 1.3rem;
+		cursor: pointer;
+		z-index: 888;
+		animation: slide 1s ease-in-out;
+	}
+}
+
+@media (min-width: 2229px) {
+	.more_close {
+		position: fixed;
+		top: calc((100vh - 99vh));
+		left: calc((100vw - 64vw));
+		font-weight: 600;
+		font-size: 1.3rem;
+		cursor: pointer;
+		z-index: 888;
+		animation: slide 1s ease-in-out;
+	}
 }
 }
 
