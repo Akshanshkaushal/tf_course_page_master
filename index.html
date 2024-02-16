@@ -1984,6 +1984,7 @@
             const backdrop = document.createElement('div');
         
             // Apply blur effect to the backdrop
+            if (window.innerWidth > 768) {
             backdrop.className = 'backdrop'; // Use the same class name
             backdrop.style.position = 'fixed';
             backdrop.style.top = '0';
@@ -1997,7 +1998,7 @@
             backdrop.addEventListener('click', (event) => {
                 event.stopPropagation(); // Prevent the click event from reaching the body
             });
-        
+            }
         
             document.body.appendChild(backdrop);
         
